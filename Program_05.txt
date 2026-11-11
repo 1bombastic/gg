@@ -1,0 +1,25 @@
+PROGRAM 5:
+Creating and Configuring a VPC with Security Groups.
+Step-1:
+Sign in to the AWS Console and open the VPC service. Confirm the Region in which the lab resources will be created.
+Step-2:
+From Your VPCs, choose Create VPC. Select VPC only if configuring the components manually.
+Step-3:
+Enter a name such as Lab-VPC and an IPv4 CIDR block such as 10.0.0.0/16.
+Step-4:
+Keep tenancy and other optional settings at their defaults unless the experiment requires a change. Create the VPC and verify that its state is Available.
+Step-5:
+Open Subnets and choose Create subnet. Select Lab-VPC, choose an Availability Zone, and assign a subnet CIDR within the VPC range, for example 10.0.1.0/24.
+Step-6:
+Create the subnet and confirm that it appears under the selected VPC. If the experiment needs public internet access, additional routing and an Internet Gateway are required.
+Step-7:
+Open Security Groups and choose Create security group. Enter a name and description and select Lab-VPC as the VPC.
+Step-8:
+Configure inbound rules only for the traffic needed by the experiment. For Linux SSH administration, use TCP port 22 with the source set to My IP. For a web server demonstration, add TCP port 80 only if needed.
+Step-9:
+Keep outbound rules limited to the requirements of the lab. Review each rule before creating the security group.
+Step-10:
+Create the security group and inspect its inbound and outbound rules. Security groups are stateful virtual firewalls associated with network interfaces.
+Step-11:
+If required, launch a test EC2 instance into the created subnet and select the new security group. Verify that the instance details show the correct VPC, subnet, and security group.
+RESULT : The above program was successfully executed and output is verified.

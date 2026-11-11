@@ -1,0 +1,27 @@
+PROGRAM 4:
+Attaching and Managing EBS Volumes in EC2.
+Step-1:
+Open EC2 in the AWS Console and select Instances. Choose a suitable test instance or launch one if required.
+Step-2:
+Record the instance's Availability Zone from its details. An EBS volume must be created in the same Availability Zone as the instance to which it will be attached.
+Step-3:
+Under Elastic Block Store, open Volumes and choose Create volume.
+Step-4:
+Select a volume type, such as General Purpose SSD (gp3), and enter a size suitable for the experiment. Keep other settings at their defaults unless your lab instructions specify otherwise.
+Step-5:
+Choose the same Availability Zone as the EC2 instance. Add a Name tag such as Lab-EBS-Volume if the console provides the option.
+Step-6:
+Click Create volume and wait until the volume state becomes Available.
+Step-7:
+Select the volume and choose Actions, then Attach volume. Select the target EC2 instance and confirm the device name if prompted.
+Step-8:
+Click Attach volume. Return to the Volumes list and confirm that the volume state is In-use and that the instance is listed as the attachment target.
+Step-9:
+If the lab requires filesystem use, connect to the instance and identify the new disk with lsblk on Linux. Carefully verify the device name before any formatting operation.
+Step-10:
+Only if the volume is confirmed to be a new, empty test volume and filesystem creation is required, create a filesystem and mount it according to the operating system instructions. Never format a disk that may contain data.
+Step-11:
+To detach a mounted volume safely, first unmount it from the operating system. Then select the volume in the console and choose Actions, Detach volume. Wait for it to become Available.
+Step-12:
+Delete the test volume only after confirming it contains no needed data and is detached. Check for storage charges while volumes remain allocated.
+RESULT : The above program was successfully executed and output is verified.

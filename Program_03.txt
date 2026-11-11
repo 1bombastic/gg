@@ -1,0 +1,25 @@
+PROGRAM 3:
+Hosting a Static Website using Amazon S3.
+Step-1:
+Open Amazon S3 and create a dedicated bucket with a globally unique name. Choose the Region required for the lab.
+Step-2:
+On your computer, create a file named index.html. Add a basic HTML page with a title, heading, and paragraph. Save the file using the exact name index.html.
+Step-3:
+Open the bucket and click Upload. Add index.html and upload it. Confirm that the object appears in the Objects list.
+Step-4:
+Open the bucket's Properties tab and scroll to Static website hosting. Click Edit.
+Step-5:
+Choose Enable. Select Host a static website and enter index.html in the Index document field. If you create a custom error page, upload it and enter its exact filename in the Error document field.
+Step-6:
+Save the static website hosting settings. Return to Properties and find the website endpoint displayed by S3. Copy the endpoint exactly.
+Step-7:
+Understand the access requirement: S3 website endpoints normally serve public website content, so a basic public demonstration requires public-read access to the website objects and a bucket policy permitting s3:GetObject. Only do this in a dedicated test bucket containing non-sensitive content, and only if your account policy allows it.
+Step-8:
+If instructed to make the site public, review the bucket's Block Public Access settings and configure them only as required for the dedicated lab bucket. Add a narrowly scoped bucket policy for the bucket's objects. Do not make unrelated buckets public.
+Step-9:
+Open the website endpoint in a browser. Confirm that the heading and paragraph from index.html are displayed.
+Step-10:
+If access is denied, verify the website endpoint, exact index filename, public-access configuration, bucket policy, and Region. A normal S3 object URL is not the same as the static website endpoint.
+Step-11:
+After taking screenshots, disable public access or remove the test bucket and its objects if they are no longer needed, following your instructor's instructions.
+RESULT : The above program was successfully executed and output is verified.

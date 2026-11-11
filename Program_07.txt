@@ -1,0 +1,27 @@
+PROGRAM 7:
+Managing AWS Resources using AWS CLI.
+Step-1:
+Open the AWS Console and ensure that your account has permission to inspect the resources used in the experiment.
+Step-2:
+Install AWS CLI version 2 using the official instructions for your operating system. Open a new terminal after installation.
+Step-3:
+Run aws --version and confirm that the CLI version is displayed. If the command is not recognized, verify installation and PATH settings.
+Step-4:
+Configure authentication using the method approved by your institution. Prefer IAM Identity Center or temporary credentials where available. Do not place access keys in source code or commit credentials to Git.
+Step-5:
+Aws configure, enter the approved access key, secret key, default Region, and output format securely.
+Step-6:
+Verify the identity and account access by running: aws sts get-caller-identity
+Step-7:
+Set the Region if needed, for example: aws configure set region ap-south-1. Use the Region in which your lab resources exist.
+Step-8:
+List S3 buckets with: aws s3 ls. The command should display buckets that the configured identity is permitted to list.
+Step-9:
+Inspect EC2 instances with: aws ec2 describe-instances --query 'Reservations[].Instances[].[InstanceId,State.Name]' --output table
+Step-10:
+To test an upload, create a harmless sample file named sample.txt and upload it to a bucket you own using: aws s3 cp sample.txt s3://YOUR-BUCKET-NAME/. Replace the placeholder with your actual lab bucket name.
+Step-11:
+Verify the upload using aws s3 ls s3://YOUR-BUCKET-NAME/. If the command fails, check the bucket name, Region, permissions, and credentials.
+Step-12:
+Record the commands and their outputs. Do not run create, delete, start, or stop operations on resources unless the experiment explicitly requires them and the target is confirmed.
+RESULT : The above program was successfully executed and output is verified.

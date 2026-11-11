@@ -1,0 +1,27 @@
+PROGRAM 6:
+Configuring Network Access and Elastic IP for EC2.
+Step-1:
+Open EC2 and select the instance to be used for the experiment. Record its VPC, subnet, Availability Zone, and security group.
+Step-2:
+Open the VPC service and verify the subnet's route table. For a public IPv4 connection, the route table normally needs a route to an Internet Gateway, and the instance needs a public IPv4 address or Elastic IP.
+Step-3:
+Under Internet Gateways, create an Internet Gateway if required, then attach it to the lab VPC. Do not detach gateways used by other resources.
+Step-4:
+Open the route table associated with the intended public subnet.
+Step-5:
+Review the instance's security group. Allow only the necessary inbound traffic, such as SSH TCP port 22 from your own IP address for a Linux instance. Confirm network ACLs do not block required traffic.
+Step-6:
+In the EC2 navigation panel, open Elastic IPs under Network & Security and choose Allocate Elastic IP address.
+Step-7:
+Keep the address pool and network border group settings appropriate for the selected Region, then allocate the address.
+Step-8:
+Select the new Elastic IP and choose Actions, Associate Elastic IP address.
+Step-9:
+Choose the appropriate resource type and select the target instance or its network interface. Confirm the association.
+Step-10:
+Return to the instance details and verify that the Elastic IP is displayed as its public IPv4 address. Test the intended connection only if the instance and security configuration support it.
+Step-11:
+If connectivity fails, check the route table, Internet Gateway attachment, public address, security group, network ACL, and operating-system firewall.
+Step-12:
+When the experiment is complete, disassociate and release the Elastic IP if it is no longer required. Public IPv4 addresses and unused Elastic IPs may incur charges.
+RESULT : The above program was successfully executed and output is verified.

@@ -1,0 +1,33 @@
+PROGRAM 10:
+Creating Budget Alerts and Cost Monitoring in AWS.
+Step-1:
+Sign in to the AWS Console and open Billing and Cost Management.
+Step-2:
+From the navigation panel, open Budgets and choose Create budget.
+Step-3:
+Choose a cost budget template or a customized budget, depending on the options available in the account.
+Step-4:
+Enter a name such as LabMonthlyBudget and select a monthly budget period. Choose the budget start or renewal settings requested by the lab.
+Step-5:
+Enter a realistic budget amount and currency for the account. For a demonstration, use a small threshold such as USD 5 only if it is appropriate for your account.
+Step-6:
+Select the cost measure and scope. For a basic experiment, the default account-level cost scope is usually sufficient.
+Step-7:
+Configure an alert threshold, such as actual cost reaching 80% of the budget. If required, add a second alert for forecasted cost reaching a chosen percentage.
+Step-8:
+Add an email notification recipient. Confirm any email subscription or verification request if prompted.
+Step-9:
+Review the budget name, period, amount, threshold, and notification recipient carefully, then create the budget.
+Step-10:
+Open the budget details to inspect current cost, forecasted cost if available, and the alert thresholds. Cost information and alerts can be delayed, so do not expect instantaneous updates after every action.
+Step-11:
+Open Cost Management and choose Cost Anomaly Detection.
+Step-12:
+Open Cost monitors and choose Create monitor.
+Step-13:
+Select the monitor type AWS services. Enter the monitor’s name AWS-Learning-Cost-Monitor. Configure an alert subscription with your email address and a threshold.
+Step-14:
+Choose Create monitor and check that it appears in the Cost monitors list.
+Step-15:
+Delete the budget and the monitor if they are no longer needed.
+RESULT : The above program was successfully executed and output is verified.

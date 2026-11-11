@@ -1,0 +1,27 @@
+PROGRAM 8:
+Monitoring EC2 Instances using Amazon CloudWatch.
+Step-1:
+Open the EC2 dashboard and select a running instance. Note its instance ID and Region.
+Step-2:
+Open CloudWatch from the AWS Console search bar, ensuring you remain in the same Region as the EC2 instance.
+Step-3:
+From the CloudWatch navigation panel, select Metrics and then All metrics.
+Step-4:
+Choose the EC2 namespace. Select the metric category for per-instance metrics, then choose the required instance ID.
+Step-5:
+Select CPUUtilization to display the percentage of CPU used over time. If available, inspect NetworkIn and NetworkOut to view network traffic.
+Step-6:
+Choose a time range such as the last hour or three hours. Change the period if necessary and observe the graph. Basic EC2 metrics are normally available without installing the CloudWatch agent.
+Step-7:
+To configure an alarm, navigate to Alarms and choose Create alarm.
+Step-8:
+Select the metric for the target instance, such as CPUUtilization. Click Select metric and configure a threshold, for example greater than 80 percent for a suitable evaluation period.
+Step-9:
+Set the statistic, period, and number of evaluation period. A short-lived spike may not trigger an alarm if multiple periods are required.
+Step-10:
+Choose the alarm action. If email notification is required, select or create an SNS topic and confirm the subscription email when prompted
+Step-11:
+Enter an alarm name and description, review the configuration, and create the alarm.
+Step-12:
+Return to the Alarms page and verify the alarm appears. Its state may remain Insufficient data or OK until enough metric data is available; do not assume the alarm is broken solely because it has not entered ALARM state.
+RESULT : The above program was successfully executed and output is verified.

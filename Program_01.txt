@@ -1,0 +1,29 @@
+PROGRAM 1:
+Creating a Virtual Machine using Amazon EC2.
+Step-1:
+Sign in to the AWS Management Console using your authorized account. In the search bar at the top, enter EC2 and open the EC2 service.
+Step-2:
+Choose the AWS Region in which you want to perform the experiment. Keep the Region consistent when creating and viewing resources.
+Step-3:
+From the EC2 dashboard, select Instances and click Launch instances.
+Step-4:
+Enter a meaningful instance name, for example, Lab-EC2-Instance. A name tag helps identify the instance among other resources.
+Step-5:
+Under Application and OS Images (Amazon Machine Image), choose an operating system such as Amazon Linux. Select an image suitable for the lab instructions.
+Step-6:
+Under Instance type, select a type supported in the selected Region, such as t2.micro or t3.micro when available and eligible for your account.
+Step-7:
+Under Key pair, select an existing lab key pair or create a new one. If creating one, download the private key and store it securely. Do not upload the private key to a repository or share it.
+Step-8:
+Review Network settings. Select the required VPC and subnet. For SSH access to a Linux instance, allow TCP port 22 only from your own public IP address rather than from all IP addresses.
+Step-9:
+Review storage settings. Keep the default root volume unless the experiment specifies another size or volume type.
+Step-10:
+Review the summary on the right side and click Launch instance. Wait for the success message and open the instance details.
+Step-11:
+Wait until Instance state shows Running and the status checks pass. Record the instance ID, instance type, Availability Zone, and public IPv4 address if one was assigned.
+Step-12:
+If the lab requires connecting to the instance, select Connect and follow the appropriate EC2 Instance Connect or SSH instructions for the chosen AMI. Do not attempt SSH if no suitable route and security rule exist.
+Step-13:
+After capturing evidence, stop or terminate the instance as instructed by your lab supervisor. Termination deletes the instance and can cause data loss.
+RESULT : The above program was successfully executed and output is verified.

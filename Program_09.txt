@@ -1,0 +1,31 @@
+PROGRAM 9:
+Creating and Testing AWS Lambda Functions.
+Step-1:
+Open the AWS Console, search for Lambda, and select the Region for the experiment.
+Step-2:
+Choose Create function and select Author from scratch.
+Step-3:
+Enter a function name such as LabHelloFunction. Select a supported runtime, such as Python, and choose an appropriate execution role.
+Step-4:
+Create the function and wait for the function overview page to appear.
+Step-5:
+In the Code tab, open the source file shown by the editor. Replace the sample handler with the following Python code if the runtime is Python:
+import json
+def lambda_handler(event, context):
+return {
+"statusCode": 200,
+"body": json.dumps("Hello from AWS Lambda!")
+}
+Step-6:
+Click Deploy to publish the edited code. Wait for the success message before testing.
+Step-7:
+Click Test. If prompted, create a new test event, give it a name such as TestEvent, and use a simple JSON event such as {}. Save the event.
+Step-8:
+Run the test. Inspect the execution result and confirm that the response contains statusCode 200 and the expected message in the body.
+Step-9:
+Review the execution summary, including duration and memory used. If the function fails, inspect the error message and CloudWatch Logs.
+Step-10:
+Keep the function's permissions limited to what it needs. A simple response function does not need broad access to other AWS services.
+Step-11:
+After capturing the screenshots, delete the test function if it is no longer needed.
+RESULT : The above program was successfully executed and output is verified.
